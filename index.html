@@ -123,7 +123,7 @@
                 class="mb-5 text-center md:text-left border-gray-200"
                 type="text"
                 name=""
-                id=""
+                id="name"
                 placeholder="Enter your name"
               />
               <br />
@@ -131,7 +131,7 @@
                 class="mb-5 text-center md:text-left border-gray-200"
                 type="password"
                 name=""
-                id=""
+                id="password"
                 placeholder="password"
               />
               <br />
@@ -154,6 +154,26 @@
           class="flex justify-center items-center gap-5 flex-wrap"
         ></div>
       </section>
+      <!-- search section -->
+      <div class="join flex justify-center items-center">
+        <div>
+          <label class="input validator join-item">
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Search your Vucabulary"
+              required
+            />
+          </label>
+        </div>
+        <button id="search-btn" class="btn btn-primary join-item">
+          Search
+        </button>
+      </div>
+      <!-- spinner/loading section -->
+      <section id="spinner" class="flex justify-center items-center hidden">
+        <span class="loading loading-bars loading-xl"></span>
+      </section>
       <!-- card word container -->
       <section
         id="word-container"
@@ -168,6 +188,21 @@
           </h2>
         </div>
       </section>
+
+      <!-- Open the modal using ID.showModal() method -->
+      <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+
+      <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div id="details-container" class="space-y-5"></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </main>
 
     <script src="./scrept/scrept.js"></script>
